@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
+import Column from './components/Column';
+import Header from './components/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      currentCity: "Toronto"
+    }
+
+    this.changeCity = this.changeCity.bind(this);
+  }
+
+  changeCity(city){
+    
+
+    if(city === ""){
+      this.setState({currentCity: "Toronto"});
+    }
+
+    this.setState({currentCity: city});
+  }
+
+  render() {
+    return (
+      <div className="App">
+
+        <Header changeCity={this.changeCity}></Header>
+        <h6>Current City: {this.state.currentCity}</h6>
+        <Column inputtedCity={this.state.currentCity}></Column>
+        
+      </div>
+    )
+    
+  }
 }
-
-export default App;

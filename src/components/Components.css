@@ -1,0 +1,45 @@
+.Column{
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    width: 1000px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+.Card{
+
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 120px;
+    height: 150px;
+}
+
+.Temperature{
+    display: inline-block;
+    font-weight: lighter;
+    color: grey;
+}
+
+.first{
+    margin-right: 20px;
+    color: black;
+}
+
+img{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.weekday{
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+.cityInput{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 13px;
+}
